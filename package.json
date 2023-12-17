@@ -16,6 +16,7 @@
     "ethers": "^5.5.4",
     "hardhat": "^2.19.2",
     "ipfs-http-client": "^56.0.1",
+    "path-browserify": "^1.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.2",
     "react-dom": "^17.0.2",

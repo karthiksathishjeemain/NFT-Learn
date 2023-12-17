@@ -10,6 +10,8 @@ function App() {
  let account = await  window.ethereum.request({
   method :"eth_RequestAccount"})
   setWallet(account)
+  let provider = await ethers.providers.Web3Provider(window.ethereum)
+  const signer= await provider.getSigner()
  }
   return (
 <>
