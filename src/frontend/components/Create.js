@@ -9,6 +9,7 @@ export  function Create ({marketplace,nft}){
     const[pass,SetPass]=useState(true)
    async function ipfsfunction(event){
       file = event.target.files[0]
+      if (file !== undefined){
       result= await client.add(file)
       try {
         console.log(result)
@@ -16,7 +17,7 @@ export  function Create ({marketplace,nft}){
       } catch (error) {
        console.log("Error in uploading to IPFS",error)
       }
-   }
+   }}
    async function ListNFT(){
     if (image&&description&&nftname&&price){
     try {

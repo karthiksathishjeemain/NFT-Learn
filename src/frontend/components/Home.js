@@ -24,7 +24,7 @@ export default function Home ({marketplace,nft}){
      }
 
   async function handlePurchase(item){
-    await (await marketplace.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
+    await (await marketplace.purchaseItem(item.itemId, { value: item.TotalPrice })).wait()
     LoadListedNfts_in_Marketplace()
   }
   useEffect(()=>{

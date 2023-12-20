@@ -3,8 +3,8 @@ import { useState } from 'react';
 import './App.css';
 import { ethers } from 'hardhat';
 import { BrowserRouter,Route,Routes} from 'react-router-dom';
-import MarketplaceAbi from '../contractsData/Marketplace.json'
-import MarketplaceAddress from '../contractsData/Marketplace-address.json'
+import MarketplaceAbi from '../contractsData/MarketPlace.json'
+import MarketplaceAddress from '../contractsData/MarketPlace-address.json'
 import NFTAbi from '../contractsData/NFT.json'
 import NFTAddress from '../contractsData/NFT-address.json'
 import Navigation from './Navigation.js';
