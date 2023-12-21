@@ -36,7 +36,7 @@ export default function Home ({marketplace,nft}){
   }
   return (
     <>{items.length>0 ?
-          <div > {...items.map((item,id)=>{<>
+          <div > {items.map((item,id)=>{<>
       
                <p key={id}>{item.image} </p>
                <p onClick={()=>{handlePurchase(item)}}>Buy this NFT</p>

@@ -1,16 +1,16 @@
 import { useState } from "react"
 import { create as ipfsHttpClient } from 'ipfs-http-client'
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
-export  function Create ({marketplace,nft}){
+export default function Create ({marketplace,nft}){
     const[nftname,SetNftname] =  useState('')
     const[description,SetDescription] = useState('')
     const[price,SetPrice]=useState(null)
     const[image,SetIMage]=useState(``)
     const[pass,SetPass]=useState(true)
    async function ipfsfunction(event){
-      file = event.target.files[0]
+      const file = event.target.files[0]
       if (file !== undefined){
-      result= await client.add(file)
+     const  result= await client.add(file)
       try {
         console.log(result)
       SetIMage(`https://ipfs.infura.io/ipfs/${result.path}`)

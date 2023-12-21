@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useState } from "react"
+import { useEffect, useState } from "react";
+
 export default function MyList({marketplace,nft,account}){
     const[items,SetItems]=useState([])
  async   function handleItemsUpdate(){
@@ -31,7 +31,7 @@ return(
     <>
     <p>My Listed NFTs:</p>
     <div >
-   { ...items.map((item,idx)=>{
+   {items.map((item,idx)=>{
     <p key = {idx}>{item.image}</p>//also add name and decription
    })}
      </div>
